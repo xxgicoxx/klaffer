@@ -1,5 +1,5 @@
 # Klaffer
-A Google Chrome extension for manage tabs.
+Google Chrome extension for manage tabs.
 
 ![Menu](http://i.imgur.com/8X4jOgk.png)
 
