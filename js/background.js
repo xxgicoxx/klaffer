@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Close current tab",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({active: true}, function (tabs) {
                 chrome.tabs.remove(tabs[0].id);
             });
@@ -20,7 +20,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Close all tabs",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({}, function (tabs) {
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.remove(tabs[i].id);
@@ -33,7 +33,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Close tabs to the left of current tab",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({}, function (tabs) {
                 let i = 0;
                 while(!tabs[i].active){
@@ -48,7 +48,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Close tabs to the right of current tab",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({}, function (tabs) {
                 let close = false;
                 for (var i = 0; i < tabs.length; i++) {
@@ -66,7 +66,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Close other tabs except current tab",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({active: false}, function (tabs) {
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.remove(tabs[i].id);
@@ -79,7 +79,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Close tabs from current domain",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({active: true}, function (tab) {
                 let url = new URL(tab[0].url);
                 let domain = url.hostname
@@ -98,7 +98,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Close tabs from other domain",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({active: true}, function (tab) {
                 let url = new URL(tab[0].url);
                 let domain = url.hostname
@@ -117,7 +117,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Close tabs with sound",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({audible: true}, function (tabs) {
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.remove(tabs[i].id);
@@ -130,7 +130,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Mute tabs with sound",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({audible: true}, function (tabs) {
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.update(tabs[i].id, {"muted": true});
@@ -143,7 +143,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Unmute tabs with sound",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({muted: true}, function (tabs) {
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.update(tabs[i].id, {"muted": false});
@@ -156,7 +156,7 @@ chrome.runtime.onInstalled.addListener(function() {
         title: "Merge windows",
         parentId: "parent",
         contexts:["all"],
-        onclick: function(info){
+        onclick: function(){
             chrome.tabs.query({active: true, highlighted: true}, function (tab) {
                 chrome.tabs.query({}, function (tabs) {
                     for (var i = 0; i < tabs.length; i++) {
