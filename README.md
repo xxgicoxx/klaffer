@@ -1,12 +1,25 @@
 # Klaffer
 Google Chrome extension for manage tabs.
 
-![Menu](http://i.imgur.com/8X4jOgk.png)
+<p align="center">
+  <img src="assets/imgs/klaffer.png">
+</p>
 
-### Running
-The application run locally, just package and use.
+# Features
+* Close current tab
+* Close all tabs
+* Close tabs to the left of current tab
+* Close tabs to the right of current tab
+* Close other tabs except current tab
+* Close tabs from current domain
+* Close tabs from other domain
+* Close tabs with sound
+* Mute tabs with sound
+* Unmute tabs with sound
+* Merge windows
 
-### Run
+# Running
+### 1. Run
 ```
 # Open Google Chrome extensions
 At the top right, turn on Developer mode
@@ -18,14 +31,14 @@ Click Load unpacked
 Find and select the Klaffer folder
 ```
 
-### Build
+### 2. Build
 ```
 # Find the Klaffer folder
 Zip the folder. Then, Publish it in the Chrome Web Store.
 ```
 
-### Authors
-* **Giovani de Oliveira** - [xxgicoxx](https://github.com/xxgicoxx)
+# Authors
+* [xxgicoxx](https://github.com/xxgicoxx)
 
-### Acknowledgments
-* [FlatIcon](https://www.flaticon.com/) - Icon
+# Acknowledgments
+* [FlatIcon](https://www.flaticon.com/)
