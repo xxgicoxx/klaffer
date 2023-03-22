@@ -22,13 +22,13 @@ Google Chrome extension for manage tabs.
 ### 1. Run
 ```
 # Open Google Chrome extensions
-At the top right, turn on Developer mode
+At the top right, turn on Developer mode.
 
 # Load
-Click Load unpacked
+Click Load unpacked.
 
 # Select
-Find and select the Klaffer folder
+Find and select the Klaffer folder.
 ```
 
 ### 2. Build
